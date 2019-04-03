@@ -22,12 +22,4 @@ const accessor = (obj,defaultValue,props)  => {
     return getValue(obj,props) ? getValue(obj,props) : defaultValue
 };
 
-const obj = { p1: {
-        p2: 'value'
-    }
-}
-
-const otherAccessor = accessor(obj, 'patata')
-console.log(otherAccessor('p1.p2')) // ---> returns 'value'
-console.log(otherAccessor('p3.p2.p5'))// ---> returns 'patata'
-console.log(accessor(obj, 'patata', 'p1.p2'))
+module.exports = accessor

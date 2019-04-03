@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .subunit {
+            stroke: #000;
+            stroke-linejoin: round;
+        }
+        .subunit-boundary {
+            fill: none;
+            stroke: #777;
+            stroke-linejoin: round;
+        }
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 160px;
+            height: auto;
+            padding: 10px;
+            color:white;
+            font: 16px sans-serif;
+            background: black;
+            border: 0;
+            border-radius: 8px;
+            pointer-events: none;
+            z-index:1;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin:0;
+        }
+        #map {
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="https://d3js.org/d3.v4.js"></script>
+<!--<script src="https://d3js.org/topojson.v2.min.js"></script>-->
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script>
+    var map = d3.select("#map");
+    var width = map.node().getBoundingClientRect().width;
+    var height = map.node().getBoundingClientRect().height;
+    console.log(height)
+    var centered;
+
+    const div = d3.select("#map").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    var svg = map.append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var projection = d3.geoMercator()
+        .scale(height)
+        .center([0, 40]);
+
+    var path = d3.geoPath().projection(projection);
+
+    d3.json("es.json", function(error, world) {
+        if (error) throw error;
+
+        svg.selectAll("path")
+            .data(topojson.feature(world, world.objects.ESP_adm1).features)
+            .enter().append("path")
+            .attr("d", path).attr("class", function (d) {
+            return "subunit " + d.id;
+        })
+            .attr("d", path)
+            .style('fill', function (d) {
+                return d3.hsl(Math.random() * 100, 0.5, 0.5);
+            })
+            .on('click', clicked)
+            .on("mouseover", function (d) {
+                div.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                div.html(d.properties.NAME_1 + "<br/>")
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+            })
+            .on("mouseout", function (d) {
+                div.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
+
+
+        function clicked(d) {
+            let x, y, k;
+            if (d && centered !== d) {
+                const centroid = path.centroid(d);
+                x = centroid[0];
+                y = centroid[1];
+                k = 4;
+                centered = d;
+            } else {
+                x = width * 2
+                y = height * 2
+                k = 1;
+                centered = null;
+            }
+
+            svg.selectAll("path")
+                .classed("active", centered && function (d) {
+                    return d === centered;
+                });
+
+            svg.transition()
+                .duration(750)
+                .attr("transform", "translate(" + width * 2  + "," + height * 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+                .style("stroke-width", 1.5 / k + "px");
+        }
+    });
+
+</script>
+
+</body>
+</html>

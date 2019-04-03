@@ -3,9 +3,9 @@ var app = new Vue({
     data: {
         code: [
             {   name:'Exercise 2',
-                data:'function removeProperty(obj,prop){\n' +
-                    'return obj[prop] ? delete obj[prop] : false;\n' +
-                    '}'
+                data:'function removeProperty(obj,prop){ return obj[prop] ? delete obj[prop] : false; };' +
+                    'data = {a:1, b:2 }; '+
+                    'removeProperty(data,\'b\')'
             },
             {
                 name: 'Exercise 3',
@@ -22,7 +22,7 @@ var app = new Vue({
             },
             {
                 name: 'Exercise 5',
-                data:'const reverseOrder = (source) =>{\n' +
+                data:' const reverseOrder = (source) =>{\n' +
                     '    if (typeof source === \'number\'){\n' +
                     '        return  parseInt((source + \'\').split(\'\').sort().reverse().join(\'\'))\n' +
                     '    }\n' +
@@ -45,5 +45,11 @@ var app = new Vue({
                     '};\n'
             }
         ]
+    },
+    methods: {
+        execute: function (item) {
+            const code = item.data;
+            console.log(eval(code));
+        }
     }
 })

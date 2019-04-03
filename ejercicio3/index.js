@@ -13,10 +13,4 @@ const beautifyNumberDate = str => {
     return str.length > 1 ? str : `0${str}`;
 }
 
-assert.equal(formatDate('11/26/2014'), '20141126');
-assert.notEqual(formatDate('11/26/2014'), '201402611');
-assert.equal(formatDate('2/21/2016'), '20160221');
-assert.equal(formatDate('9/2/2001'), '20010902');
-assert.notEqual(formatDate('9/2/2001'), '200192');
-assert.equal(formatDate('13/26/2014'),'Input date format not valid'); // No existe el mes 13
-assert.equal(formatDate('9/33/2014'),'Input date format not valid'); // No existe el día 33
+module.exports = formatDate;

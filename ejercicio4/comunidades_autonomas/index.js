@@ -1,9 +1,10 @@
 (function() {
-    const width = 960,
-        height = 450;
+    var map = d3.select("#map");
+    var width = map.node().getBoundingClientRect().width;
+    var height = width / 2;
     let centered;
 
-    const svg = d3.select("body").append("svg")
+    const svg = map.append("svg")
         .attr("width", width)
         .attr("height", height);
 
@@ -17,12 +18,12 @@
 
         const subunits = topojson.feature(es, es.objects.ESP_adm1);
 
-        const projection = d3.geo.mercator()
+        const projection = d3.geoMercator()
             .scale(2300)
             .center([0, 40])
             .translate([width / 2, height / 2]);
 
-        const path = d3.geo.path()
+        const path = d3.geoPath()
             .projection(projection);
 
         const g = svg.append('g');
