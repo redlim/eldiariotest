@@ -1,7 +1,7 @@
 (function() {
-    var map = d3.select("#map");
-    var width = map.node().getBoundingClientRect().width;
-    var height = width / 2;
+    const map = d3.select("#map");
+    let width = map.node().getBoundingClientRect().width;
+    let height = map.node().getBoundingClientRect().height;
     let centered;
 
     const svg = map.append("svg")
@@ -19,8 +19,8 @@
         const subunits = topojson.feature(es, es.objects.ESP_adm1);
 
         const projection = d3.geoMercator()
-            .scale(2300)
-            .center([0, 40])
+            .scale(width + 1000)
+            .center([-4, 40])
             .translate([width / 2, height / 2]);
 
         const path = d3.geoPath()
@@ -32,7 +32,7 @@
             .enter()
             .append("path")
             .attr("class", function (d) {
-                return "subunit " + d.id;
+                return "subunit " + d.properties.NAME_1;
             })
             .attr("d", path)
             .style('fill', function (d) {
@@ -61,7 +61,6 @@
             .attr("class", "subunit-boundary");
 
         function clicked(d) {
-            console.log(d);
             let x, y, k;
 
             if (d && centered !== d) {
@@ -70,22 +69,36 @@
                 y = centroid[1];
                 k = 4;
                 centered = d;
+                if (d.properties.HASC_1 === "ES.CN"){
+                    document.querySelector('.Canarias').style.transform = 'translate(0,0)';
+                }
             } else {
                 x = width / 2;
                 y = height / 2;
                 k = 1;
                 centered = null;
+                if (d.properties.HASC_1 === "ES.CN"){
+                    document.querySelector('.Canarias').style.transform = '';
+                }
             }
 
             g.selectAll("path")
                 .classed("active", centered && function (d) {
                     return d === centered;
                 });
-
             g.transition()
                 .duration(750)
                 .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
                 .style("stroke-width", 1.5 / k + "px");
+        }
+        d3.select(window).on('resize', resize);
+        function resize(){
+            let width = document.querySelector('#map').offsetWidth;
+            let height = document.querySelector('#map').offsetHeight;
+            projection
+                .scale(width + 1000)
+                .translate([width/2,height/2]);
+            d3.selectAll("path").attr('d', path);
         }
     });
 })();
