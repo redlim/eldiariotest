@@ -48,6 +48,13 @@ div.tooltip {
     pointer-events: none;
     z-index:1;
 }
+
 .Canarias {
     transform: translate(15%, -63%);
+}
+
+@media (max-width: 600px) {
+    .Canarias {
+        transform: translate(67%, -25%);
+    }
 }

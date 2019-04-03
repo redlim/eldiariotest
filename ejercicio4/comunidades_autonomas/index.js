@@ -1,7 +1,16 @@
 (function() {
+    function getWidthAndHeight(selector) {
+        const width = document.querySelector(selector).offsetWidth;
+        const height = document.querySelector(selector).offsetHeight;
+        return {width,height}
+    }
+
+    const canariasId = 'ES.CN';
+    const canariasClass = '.Canarias';
+    const canariasContainer = document.querySelector(canariasClass);
     const map = d3.select("#map");
-    let width = map.node().getBoundingClientRect().width;
-    let height = map.node().getBoundingClientRect().height;
+    const {width, height } = getWidthAndHeight('#map');
+    const viewPortrait = width < height;
     let centered;
 
     const svg = map.append("svg")
@@ -9,7 +18,7 @@
         .attr("height", height);
 
     // Define the div for the tooltip
-    const div = d3.select("body").append("div")
+    const div = d3.select("#map").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
 
@@ -19,7 +28,7 @@
         const subunits = topojson.feature(es, es.objects.ESP_adm1);
 
         const projection = d3.geoMercator()
-            .scale(width + 1000)
+            .scale(viewPortrait ? 1000 : width + 1000)
             .center([-4, 40])
             .translate([width / 2, height / 2]);
 
@@ -35,8 +44,8 @@
                 return "subunit " + d.properties.NAME_1;
             })
             .attr("d", path)
-            .style('fill', function (d) {
-                return d3.hsl(Math.random() * 100, 0.5, 0.5);
+            .style('fill', function () {
+                return d3.hsl(Math.random() * 100, 0.6, 0.5);
             })
             .on('click', clicked)
             .on("mouseover", function (d) {
@@ -69,8 +78,8 @@
                 y = centroid[1];
                 k = 4;
                 centered = d;
-                if (d.properties.HASC_1 === "ES.CN"){
-                    document.querySelector('.Canarias').style.transform = 'translate(0,0)';
+                if (d.properties.HASC_1 === canariasId){
+                    canariasContainer.style.transform = 'translate(0,0)';
                 }
             } else {
                 x = width / 2;
@@ -78,7 +87,7 @@
                 k = 1;
                 centered = null;
                 if (d.properties.HASC_1 === "ES.CN"){
-                    document.querySelector('.Canarias').style.transform = '';
+                    canariasContainer.style.transform = '';
                 }
             }
 
@@ -93,8 +102,17 @@
         }
         d3.select(window).on('resize', resize);
         function resize(){
-            let width = document.querySelector('#map').offsetWidth;
-            let height = document.querySelector('#map').offsetHeight;
+            const {width, height } = getWidthAndHeight('#map');
+            d3.select('svg')
+                .attr("width", width)
+                .attr("height", height);
+
+            if (width < height ) {
+                console.log('hey', width, height)
+                projection
+                    .scale(500)
+                    .translate([width/2,height/2]);
+            } else
             projection
                 .scale(width + 1000)
                 .translate([width/2,height/2]);

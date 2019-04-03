@@ -51,3 +51,9 @@ div.tooltip {
 .Canarias {
     transform: translate(15%, -63%);
 }
+
+@media (max-width: 600px) {
+    .Canarias {
+        transform: translate(67%, -25%);
+    }
+}
