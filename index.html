@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test El Diario</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <main class="grid-container" id="app">
+        <header><h1>Test by Wilder Olmos</h1></header>
+        <div class="item" v-for="item in code">
+            <h2>{{item.name}}</h2>
+            <pre>
+                {{item.data}}
+            </pre>
+        </div>
+        <div class="item">
+            <h2>Exercise 4</h2>
+            <a href="ejercicio4/comunidades_autonomas/index.html"></a>
+            <a href="ejercicio4/provincias/index.html"></a>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
