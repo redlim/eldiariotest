@@ -53,7 +53,8 @@ header h1 {
 
 .item pre {
     font-size: 12px;
-    word-wrap: break-word;
+    word-break: break-word;
+    -ms-word-wrap: break-word;
     white-space: pre-wrap;
 }
 .grid-container {
