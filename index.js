@@ -33,17 +33,18 @@ var app = new Vue({
             {
                 name: 'Accessor',
                 data: 'const getValue = (obj, props) => {\n' +
-                    '  if(props.split(\'.\').length === 1 ) return obj[props];\n' +
-                    '  const result = obj[props.split(\'.\')[0]];\n' +
-                    '  if (!result) return null;\n' +
-                    '  return getValue(result,props.substring(props.indexOf(\'.\')+1,props.length))\n' +
-                    ' }\n' +
-                    ' const accessor = (obj,defaultValue,props)  => {\n' +
-                    '  if (props === undefined) return function(props){\n' +
-                    '  return accessor(obj,defaultValue,props)\n' +
+                    ' if(props.split(\'.\').length === 1 ) return obj[props];\n' +
+                    '  const prop = props.split(\'.\')[0];\n' +
+                    ' if (!obj.hasOwnProperty(prop)) return null;\n' +
+                    '  return getValue(obj[prop],props.substring(props.indexOf(\'.\')+1,props.length));\n' +
+                    '};\n' +
+                    '\n' +
+                    'const accessor = (obj,defaultValue,props)  => {\n' +
+                    ' if (props === undefined) return function(props){\n' +
+                    '  return accessor(obj,defaultValue,props);\n' +
                     ' };\n' +
-                    ' return getValue(obj,props) ? getValue(obj,props) : defaultValue\n' +
-                    '};\n'
+                    ' return getValue(obj,props) ? getValue(obj,props) : defaultValue;\n' +
+                    '};'
             }
         ]
     },
