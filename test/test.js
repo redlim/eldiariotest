@@ -8,10 +8,11 @@ const accessor = require('../ejercicio6');
 describe('Javascript exercises test', () => {
     describe('exercise 2', () => {
         it('should return false when the value is not present', () =>{
-            const data = {a:1, b:2};
-            assert.equal(removeProperty(data,'c'),false);
+            const data = {a:1, b:2, c:0};
+            assert.equal(removeProperty(data,'d'),false);
             assert.equal(data.a,1);
             assert.equal(data.b,2)
+            assert.equal(data.c,0)
         });
         it('should return false when the value is not present', () =>{
             const data = {a:1, b:2};
