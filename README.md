@@ -1,4 +1,4 @@
-# Test for El Diario
+# Test for eldiario
 
 Before all, you need to run `npm install` 
 
