@@ -6,11 +6,11 @@
 
 const formatDate = (userDate) => {
     const validDate = userDate.match(/^(1[0-2]|[1-9])\/(3[01]|[12][0-9]|[1-9])\/(\d{4})$/);
-    return validDate ? validDate[3] + beautifyNumberDate(validDate[1]) + beautifyNumberDate(validDate[2]) : 'Input date format not valid'
-}
+    return validDate ? validDate[3] + beautifyNumberDate(validDate[1]) + beautifyNumberDate(validDate[2]) : 'Input date format not valid';
+};
 
 const beautifyNumberDate = str => {
     return str.length > 1 ? str : `0${str}`;
-}
+};
 
 module.exports = formatDate;

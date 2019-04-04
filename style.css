@@ -21,7 +21,7 @@ header {
     background-color: var(--color-white);
     height: auto;
     grid-column-start: 1;
-    grid-column-end:3;
+    grid-column-end:1;
     -webkit-box-shadow: 4px 4px 4px 0 var(--shadow-color);
     -moz-box-shadow: 4px 4px 4px 0 var(--shadow-color);
     box-shadow: 4px 4px 4px 0 var(--shadow-color);
@@ -59,10 +59,11 @@ header h1 {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 14px;
+    grid-template-columns: auto;
+    grid-gap: 15px;
 }
-@media (max-width: 992px) {
+
+@media (min-width: 768px) {
     .grid-container {
         grid-template-columns: auto auto;
     }
@@ -72,12 +73,12 @@ header h1 {
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 992px) {
     .grid-container {
-        grid-template-columns: auto;
+        grid-template-columns: auto auto auto;
     }
     header {
         grid-column-start: 1;
-        grid-column-end:1;
+        grid-column-end:3;
     }
 }

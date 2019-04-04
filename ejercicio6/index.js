@@ -11,15 +11,16 @@
 
 const getValue = (obj, props) => {
     if(props.split('.').length === 1 ) return obj[props];
-    const result = obj[props.split('.')[0]];
-    if (!result) return null;
-    return getValue(result,props.substring(props.indexOf('.')+1,props.length))
-}
-const accessor = (obj,defaultValue,props)  => {
-    if (props === undefined) return function(props){
-        return accessor(obj,defaultValue,props)
-    };
-    return getValue(obj,props) ? getValue(obj,props) : defaultValue
+    const prop = props.split('.')[0];
+    if (!obj.hasOwnProperty(prop)) return null;
+    return getValue(obj[prop],props.substring(props.indexOf('.')+1,props.length));
 };
 
-module.exports = accessor
+const accessor = (obj,defaultValue,props)  => {
+    if (props === undefined) return function(props){
+        return accessor(obj,defaultValue,props);
+    };
+    return getValue(obj,props) ? getValue(obj,props) : defaultValue;
+};
+
+module.exports = accessor;

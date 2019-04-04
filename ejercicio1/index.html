@@ -31,10 +31,17 @@
     }
     .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
         grid-gap: 15px;
+
     }
-    @media (max-width: 992px) {
+
+    header {
+        grid-column-start: 1;
+        grid-column-end:1;
+    }
+
+    @media (min-width: 768px) {
         .grid-container {
             grid-template-columns: auto auto;
         }
@@ -44,13 +51,13 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 992px) {
         .grid-container {
-            grid-template-columns: auto;
+            grid-template-columns: auto auto auto;
         }
         header {
             grid-column-start: 1;
-            grid-column-end:1;
+            grid-column-end:3;
         }
     }
 
