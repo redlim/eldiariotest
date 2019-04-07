@@ -1,0 +1,446 @@
+{
+    "Id": "e5126490-ee36-43d3-8aae-31c672e51bc0",
+    "Url": "www.epdata.es/numero-votos-validos-cada-diputado-elegido-2016/e5126490-ee36-43d3-8aae-31c672e51bc0",
+    "Titulo": {
+        "TextoPlano": "Número de votos válidos por cada diputado elegido en 2016",
+        "TextoDinamico": "Número de votos válidos por cada diputado elegido en 2016",
+        "Huecos": null
+    },
+    "Subtitulo": {
+        "TextoPlano": "",
+        "TextoDinamico": "",
+        "Huecos": null
+    },
+    "Datos": {
+        "Metricas": [
+            {
+                "Id": 0,
+                "Nombre": "Votos por diputados repartidos",
+                "SonDatosNumericos": true,
+                "Fuente": "Ministerio del Interior",
+                "Clasificacion": null,
+                "Unidad": "Votos",
+                "Escala": "",
+                "EscalaFactorPotencia10": 0,
+                "Datos": [
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "A Coruña",
+                        "Valor": 80.424,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Madrid",
+                        "Valor": 96.272,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Gipuzkoa",
+                        "Valor": 60.916,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Zaragoza",
+                        "Valor": 73.305,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Ávila",
+                        "Valor": 32.972,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Palencia",
+                        "Valor": 33.542,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Illes Balears",
+                        "Valor": 58.098,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Cádiz   ",
+                        "Valor": 68.417,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Soria",
+                        "Valor": 24.809,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Lugo",
+                        "Valor": 48.239,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Cuenca",
+                        "Valor": 38.616,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Zamora",
+                        "Valor": 36.298,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Asturias",
+                        "Valor": 74.337,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Ourense",
+                        "Valor": 46.544,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Huesca",
+                        "Valor": 38.961,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Cáceres",
+                        "Valor": 59.051,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Sevilla",
+                        "Valor": 86.093,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Lleida",
+                        "Valor": 45.29,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Córdoba ",
+                        "Valor": 74.47,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Valladolid",
+                        "Valor": 63.154,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Araba - Álava",
+                        "Valor": 41.91,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Navarra",
+                        "Valor": 67.067,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Huelva",
+                        "Valor": 49.164,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Burgos",
+                        "Valor": 51.745,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Segovia",
+                        "Valor": 29.508,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "León    ",
+                        "Valor": 70.215,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Ciudad Real",
+                        "Valor": 55.879,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Valencia",
+                        "Valor": 88.72,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Almería",
+                        "Valor": 51.112,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Murcia",
+                        "Valor": 71.359,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Guadalajara",
+                        "Valor": 43.846,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Bizkaia",
+                        "Valor": 77.652,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Santa Cruz de Tenerife",
+                        "Valor": 68.095,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Las Palmas",
+                        "Valor": 62.813,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Ceuta",
+                        "Valor": 30.837,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Toledo",
+                        "Valor": 61.251,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Alicante / Alacant",
+                        "Valor": 72.931,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Melilla",
+                        "Valor": 27.121,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Granada",
+                        "Valor": 69.934,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Barcelona",
+                        "Valor": 85.288,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Salamanca",
+                        "Valor": 50.621,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "La Rioja",
+                        "Valor": 43.246,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Castellón / Castelló",
+                        "Valor": 59.841,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Teruel",
+                        "Valor": 24.974,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Albacete",
+                        "Valor": 54.868,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Málaga",
+                        "Valor": 67.714,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Girona",
+                        "Valor": 51.309,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Badajoz",
+                        "Valor": 62.992,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Pontevedra",
+                        "Valor": 77.81,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Jaén",
+                        "Valor": 74.152,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Cantabria",
+                        "Valor": 67.513,
+                        "Estado": null,
+                        "Notas": null
+                    },
+                    {
+                        "Agno": 2016,
+                        "Periodo": "Junio",
+                        "Parametro": "Tarragona",
+                        "Valor": 57.437,
+                        "Estado": null,
+                        "Notas": null
+                    }
+                ]
+            }
+        ]
+    }
+}
