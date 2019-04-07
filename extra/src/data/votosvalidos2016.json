@@ -42,7 +42,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Gipuzkoa",
+                        "Parametro": "Guipúzcoa",
                         "Valor": 60.916,
                         "Estado": null,
                         "Notas": null
@@ -74,7 +74,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Illes Balears",
+                        "Parametro": "Baleares",
                         "Valor": 58.098,
                         "Estado": null,
                         "Notas": null
@@ -82,7 +82,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Cádiz   ",
+                        "Parametro": "Cádiz",
                         "Valor": 68.417,
                         "Estado": null,
                         "Notas": null
@@ -170,7 +170,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Córdoba ",
+                        "Parametro": "Córdoba",
                         "Valor": 74.47,
                         "Estado": null,
                         "Notas": null
@@ -186,7 +186,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Araba - Álava",
+                        "Parametro": "Álava",
                         "Valor": 41.91,
                         "Estado": null,
                         "Notas": null
@@ -226,7 +226,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "León    ",
+                        "Parametro": "León",
                         "Valor": 70.215,
                         "Estado": null,
                         "Notas": null
@@ -274,7 +274,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Bizkaia",
+                        "Parametro": "Vizcaya",
                         "Valor": 77.652,
                         "Estado": null,
                         "Notas": null
@@ -314,7 +314,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Alicante / Alacant",
+                        "Parametro": "Alicante",
                         "Valor": 72.931,
                         "Estado": null,
                         "Notas": null
@@ -362,7 +362,7 @@
                     {
                         "Agno": 2016,
                         "Periodo": "Junio",
-                        "Parametro": "Castellón / Castelló",
+                        "Parametro": "Castellón",
                         "Valor": 59.841,
                         "Estado": null,
                         "Notas": null
