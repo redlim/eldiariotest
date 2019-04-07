@@ -5,7 +5,7 @@
   "main": "extra/extra/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production ./extra/src/index.js",
     "start": "webpack-dev-server --mode development ./extra/src/index.js --open"
   },
   "repository": {
