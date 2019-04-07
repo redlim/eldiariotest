@@ -59,9 +59,8 @@ export class SpainMap  {
     }
 
     _tooltipDom(d,data,text){
-        return `${d.properties.NAME_2} 
-        <br/> 
-        ${text} ${data[d.properties.NAME_2]} `;
+        return `<p class="tooltip-title">${d.properties.NAME_2}</p> 
+        <p class="tooltip-content">${text} ${data[d.properties.NAME_2]}</p> `;
     }
     _handleMouseOver(d, data, text){
         this.tooltipContainer.transition()
